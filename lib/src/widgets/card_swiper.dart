@@ -15,16 +15,19 @@ class CardSwiper extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return ClipRRect(
               borderRadius: BorderRadius.circular(20.0),
-              child: Container(
-                  color: Colors.blueAccent,
-                  child: Center(
-                      child: Text(
-                    items[index].toString(),
-                    style: TextStyle(
-                        fontSize: 150.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ))));
+              child: GestureDetector(
+                onTap: () => Navigator.pushNamed(context, 'valueCard',arguments:items[index].toString() ),
+                              child: Container(
+                    color: Colors.blue,
+                    child: Center(
+                        child: Text(
+                      items[index].toString(),
+                      style: TextStyle(
+                          fontSize: 150.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ))),
+              ));
         },
         itemCount: items.length,
         layout: SwiperLayout.STACK,
