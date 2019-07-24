@@ -14,7 +14,13 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
-      body: SafeArea(child: Text('Hola Mundo')),
+      body: Container(
+        child: _swiperCards(),
+      ),
     );
+  }
+
+  Widget _swiperCards(){
+    return Container();
   }
 }
