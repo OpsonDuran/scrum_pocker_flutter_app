@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:scrum_pocker_flutter_app/src/widgets/card_swiper.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -22,18 +22,8 @@ class Home extends StatelessWidget {
   }
 
   Widget _swiperCards(){
-    return Container(
-      padding: EdgeInsets.only(top: 70.0),
-      width: double.infinity,
-      height: 450.0,
-      child: Swiper(
-          itemBuilder: (BuildContext context,int index){
-            return new Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill,);
-          },
-          itemCount: 3,
-          layout: SwiperLayout.STACK,
-          itemWidth: 200.0,
-        ),
+    return CardSwiper(
+      items: [1,2,3,5,8,13,100],
     );
   }
 }
