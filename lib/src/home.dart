@@ -23,8 +23,9 @@ class Home extends StatelessWidget {
 
   Widget _swiperCards(){
     return Container(
+      padding: EdgeInsets.only(top: 70.0),
       width: double.infinity,
-      height: 300.0,
+      height: 450.0,
       child: Swiper(
           itemBuilder: (BuildContext context,int index){
             return new Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill,);
