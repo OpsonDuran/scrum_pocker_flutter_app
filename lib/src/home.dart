@@ -30,8 +30,8 @@ class Home extends StatelessWidget {
             return new Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill,);
           },
           itemCount: 3,
-          pagination: new SwiperPagination(),
-          control: new SwiperControl(),
+          layout: SwiperLayout.STACK,
+          itemWidth: 200.0,
         ),
     );
   }
